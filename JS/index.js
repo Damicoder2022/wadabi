@@ -1,14 +1,3 @@
-$(document).ready(function()
-{
-$('#containerSlider').slick({
-	dots: true,
-	infinite: true,
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	autoplay: true,
-	autoplaySpeed: 2000,
-	});
-});
 
 var links = document.getElementById("links");
 var categoriesList = document.getElementById("categories");
@@ -41,19 +30,19 @@ window.onload= function(){
 			this.bill = '';
 		}
 	}
-	//  PRODUCTOS  
+	//  BASE DE DATOS DE PRODUCTOS  
 	if (localStorage.getItem('listaProducto') == null)
 	 {
 		var tablaProducto =
 		[
-		new Producto('Zapatilla Nike Negra-Roja-Azul',25000,61,"Zapatilla Nike Negra-Roja-Azul"),
-		new Producto('Zapatilla Nike Blanca',23500,62,"Zapatilla Nike Blanca"),
-		new Producto('Zapatilla Nike Runing Negra',24900,63,"Zapatilla Nike Runing Negra"),
-		new Producto('Zapatilla Nike Tennis Blanca',21700,64,"Zapatilla Nike Tennis Blanca"),
-		new Producto('Zapatilla Cuero Beige',20450,65,"Zapatilla Cuero Beige"),
-		new Producto('Campera Nike Blanca y Azul',35000,65,"Campera Nike Blanca y Azul"),
+		new Producto('Zapatilla Nike NRA',25000,61,"Zapatilla Nike NRA"),
+		new Producto('Zapatilla Nike B',23500,62,"Zapatilla Nike B"),
+		new Producto('Zapatilla Nike Runing N',24900,63,"Zapatilla Nike Runing"),
+		new Producto('Zapatilla Nike Tennis B',21700,64,"Zapatilla Nike Tennis"),
+		new Producto('Zapatilla Cuero B',20450,65,"Zapatilla Cuero"),
+		new Producto('Campera Nike BA',35000,65,"Campera Nike BA"),
 		new Producto('Remera Negra',2500,65,"Remera Negra"),
-		new Producto('Campera amarilla',32000,65,"Campera amarilla"),
+		new Producto('Campera Amarilla',32000,65,"Campera Amarilla"),
 		new Producto('Short Marron',9000,65,"Short Marron"),
 		];
 	}else var tablaProducto = JSON.parse(localStorage.getItem('listaProducto'));
@@ -143,24 +132,6 @@ window.onload= function(){
 		}
 	}
 }
-
-var heros = document.getElementsByClassName('overlay-container');
-var overlays = document.getElementsByClassName('my-overlay');
-var bigImgContainer = document.getElementById('img16-4p5-container');
-var heroSectionRoot = document.getElementById("heroSection"); 
-var img1 = "./imagenes/foto2.jpg";
-var img2 = "./imagenes/foto2.jpg";
-var img3 = "./imagenes/foto2.jpg";
-var img4 = "./imagenes/foto2.jpg";
-var text1 = "foto1";
-var text2 = "foto2";
-var text3 = "foto3";
-var text4 = "foto4";
-var title1 = "General";
-var title2 = "Clothes";
-var title3 = "Consumables";
-var title4 = "Services";
-
 
 function activate(index) {
     if (index === 1) {

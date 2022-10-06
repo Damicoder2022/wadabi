@@ -19,14 +19,12 @@
 
 <body>
   <header>
-    
     <nav class="navBar">
       <div onclick="burgerClicked(this)" class="burger">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-  
       </div>
       <div class="logoContainer">
         <a href="index.html"><img src="./IMAGENES/wadabi punto com blanco.png" height="30px" alt="logoWadabi"></a>
@@ -34,23 +32,21 @@
       <ul id="links" class="links hide">
         <li class="link"><a href="index.html">Inicio <i class="fa fa-home" aria-hidden="true"></i></li></a>
         <li class="link"><a href="catalogue.html">Productos <i class="fa fa-shopping-bag" aria-hidden="true"></i></li></a>
-        <li class="link"><a href="sucursales.html">Sucursales <i class="fa-solid fa fa-location-dot" aria-hidden="true"></i></li></a>
         <li class="link"><a href="cart.html">Carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></li></a>   
-
       </ul>
     </nav>
   </header>
   
-  <section id="hero2">
-    <h1>Nueva coleccion<br>Temporada primavera 2022</h1>
-  </section>  
+  <div id="miniAnimation">
+    <p>Nueva Colección Primavera 2022</p>
+  </div>  
 
   <div class="grid-container">
     <section id="heroSection" class="heros-section" >
-        <div class="hero-container1 overlay-container"><img src="./IMAGENES/Zapatilla Nike Negra-Roja-Azul.jpg" class="img-hero img1"/><div class="my-overlay o1"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
+        <div class="hero-container1 overlay-container"><img src="./IMAGENES/Zapatilla Nike NRA.jpg" class="img-hero img1"/><div class="my-overlay o1"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
         <div class="hero-container2 overlay-container"><img src="./IMAGENES/Short Marron.jpg  " class="img-hero img2"/><div class="my-overlay o2"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
         <div class="hero-container3 overlay-container"><img src="./IMAGENES/Campera amarilla.jpg" class="img-hero img3"/><div class="my-overlay x o3"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
-        <div class="hero-container4 overlay-container"><img src="./IMAGENES/Zapatilla Nike Blanca.jpg" class="img-hero img4"/><div class="my-overlay x o4"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
+        <div class="hero-container4 overlay-container"><img src="./IMAGENES/Zapatilla Nike B.jpg" class="img-hero img4"/><div class="my-overlay x o4"><h3></h3><button class="discover-button"><a href=catalogue.html style="color: blue;">Ver mas..</a></button></div></div>
     </section>
 
   <section>
@@ -63,8 +59,6 @@
   </section>
   </div>
   
-
-
   <footer>
     <section>    
         <div id="containerFooter">
@@ -80,7 +74,7 @@
                 <h3> Links de ayuda </h3>
                 <p><a href="index.html">Inicio</a></p>
                 <p><a href="about.html">Acerca de Wadabi</a></p>
-                <p> contact </p>
+                <p><a href="mailto:info@wadabi.com"> contact </p>
             </div>
             <div class="webFooter">
                 <h3>partners </h3>
@@ -91,17 +85,17 @@
                 <p>+ many more </p>
             </div>
             <div class="webFooter">
-                <a href="sucursales.html"><h3> Sucursales </h3></a> 
-                <a href="sucursales.html"><p> Almagro </p></a> 
-                <a href="sucursales.html"><p> Villa Soldati </p></a>
-                <a href="sucursales.html"><p> Microcentro </p></a>
+                <h3> sucursales </h3>
+                <p><a href="sucursales.html">Almagro</a></p>
+                <p><a href="sucursales.html">Villa Soldati</a></p>
+                <p><a href="sucursales.html">Microcentro</a></p>
             </div>
         </div>
         <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
     </section>
   </footer>
   <script src="JS/index.js"></script>
+  <script src="js/slick.js"></script>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
 </html>
