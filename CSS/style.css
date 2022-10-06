@@ -492,6 +492,11 @@ a {
   font-weight: bold;
 }
 
+p.adress{
+  font-size: 22px;
+  font-weight: normal;
+}
+
 iframe{
   max-width: 100%;
 }
@@ -646,6 +651,14 @@ transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 #despedida{
   margin-left: 70px;
 }
+
+menu{
+  width: 80%;
+  height: 40vh;
+  margin: 4rem auto;
+}
+
+
 /* ----------------------------- MEDIA QUERY --------------------------- */
 
 @media(max-width:320px) {
