@@ -8,8 +8,8 @@
   <link href="./css/style.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/ab3d4a31e3.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
@@ -40,60 +40,54 @@
   </header>
   <menu>
     <h2>Datos para la Facturación:</h2>
-    <form action="show_data.html" target="_self" id="showdata">
-      <label for="firstname">Nombre:</label>
-      <input type="text" name="Nombre" placeholder="Ingrese su nombre aqui.."><br><br>
-      <label for="lastname">Apellido:</label>
-      <input type="text" name="Apellido" placeholder="Ingrese su apellido aqui.."><br><br>
-      <label for="address">Dirección:</label>
-      <input type="text" name="Domicilio" placeholder="Ingrese su dirección aqui.."><br><br>
-      <label for="email">Correo e-mail:</label>
-      <input type="email" name="Email" placeholder="Ingrese su email aqui.."><br><br>
-      <label for="phone">Teléfono:</label>
-      <input type="tel" name="Telefono" placeholder="Ingrese su telefono aqui.."><br><br>
-      <p>Formas de pago:
-        <input type="radio" name="MedioDePago" value="transferencia"> Transferencia
-        <input type="radio" name="MedioDePago" value="paypal"> Paypal
-        <input type="radio" name="MedioDePago" value="efectivo"> Efectivo / Personalmente
-      </p>
-      <input type="submit" value="Enviar">
+    <br>
+    <form action="show_data.html" name="fvalida" target="_self" id="showdata">
+        <table>
+            <tr>
+                <td><label for="firstname">Nombre: </label><input type="text" name="Nombre" minlength="3"
+                  maxlength="20"  placeholder="Ingrese su nombre aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="lastname">Apellido: </label><input type="text" name="Apellido" minlength="3"
+                maxlength="20" placeholder="Ingrese su apellido aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="age">Edad: </label><input type="number" name="Edad" placeholder="Ingrese su edad aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="address">Direccion: </label><input type="text" name="Direccion" minlength="3"
+                maxlength="50" placeholder="Ingrese su direccion aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email: </label><input type="email" name="Email" size="20" maxlength="50"  placeholder="Ingrese su email aqui.."></td>
+            </tr>
+            <tr>
+              <td><label for="telefono">Telefono: </label><input type="text" name="Telefono" minlength="3"
+                maxlength="50"  placeholder="Ingrese su telefono aqui.."></td>
+            </tr>
+            <tr>
+                <td>Formas de pago:</td>
+                <td>
+                    <select name=interes minlength="1">
+                        <option value="Elegir">Elegir
+                        <option value="Transferencia">Transferencia Bancaria
+                        <option value="Paypal">Paypal/MercadoPago
+                        <option value="Efectivo">Abonar en efectivo
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Al presionar el botón, se llama a la función de validacion -->
+                    <input type="button" id="showdata" value="Enviar" onclick="validarEnviar()">
+                </td>
+            </tr>
+        </table>
     </form>
+
   </menu>
 
-  <footer>
-      <section>    
-          <div id="containerFooter">
-              
-              <div class="webFooter">
-                  <h3> redes sociales </h3>
-                  <p><i class="fa-brands fa-twitter"></i> twitter </p>
-                  <p><i class="fa-brands fa-instagram"></i> instagram </p>
-                  <p><i class="fa-brands fa-square-facebook"></i> facebook </p>
-                  <p><i class="fa-solid fa-envelope"></i> e-mail </p>
-              </div>
-              <div class="webFooter">
-                <h3> Links de ayuda </h3>
-                <p><a href="index.html">Inicio</a></p>
-                <p><a href="about.html">Acerca de Wadabi</a></p>
-                <p><a href="mailto:info@wadabi.com"> contact </p>
-            </div>
-            <div class="webFooter">
-                <h3>partners </h3>
-                <p>zara </p>
-                <p>pantaloons </p>
-                <p>levis </p>
-                <p>ucb </p>
-                <p>+ many more </p>
-            </div>
-            <div class="webFooter">
-                <h3> sucursales </h3>
-                <p><a href="sucursales.html">Almagro</a></p>
-                <p><a href="sucursales.html">Villa Soldati</a></p>
-                <p><a href="sucursales.html">Microcentro</a></p>
-            </div>
-          </div>
-          <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
-      </section>
+  <footer id="idfooter">
   </footer>
   <script src="JS/checkout.js"></script>
   <script src="js/index.js"></script>

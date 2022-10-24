@@ -198,3 +198,55 @@ function buscar_producto() {
     }
 }
 /*-------------fin del buscador----------------*/
+
+/*---footer---*/
+var cad=`
+<section>    
+        <div id="containerFooter">
+            
+            <div class="webFooter">
+                <h3> redes sociales </h3>
+                <p><i class="fa-brands fa-twitter"></i> twitter </p>
+                <p><i class="fa-brands fa-instagram"></i> instagram </p>
+                <p><i class="fa-brands fa-square-facebook"></i> facebook </p>
+                <p><i class="fa-solid fa-envelope"></i> e-mail </p>
+            </div>
+            <div class="webFooter">
+                <h3> Links de ayuda </h3>
+                <p><a href="index.html">Inicio</a></p>
+                <p><a href="about.html">Acerca de Wadabi</a></p>
+                <p><a href="mailto:info@wadabi.com"> contact </p>
+            </div>
+            <div class="webFooter">
+                <h3>partners </h3>
+                <p>zara </p>
+                <p>pantaloons </p>
+                <p>levis </p>
+                <p>ucb </p>
+                <p>+ many more </p>
+            </div>
+            <div class="webFooter">
+                <h3> sucursales </h3>
+                <p><a href="sucursales.html">Almagro</a></p>
+                <p><a href="sucursales.html">Villa Soldati</a></p>
+                <p><a href="sucursales.html">Microcentro</a></p>
+            </div>
+        </div>
+        <div id="credit">© Todos los derechos reservados &nbsp&nbsp&nbsp | &nbsp&nbsp&nbsp <a href="index.html"> WADABI </a></div>
+    </section>
+`
+document.getElementById("idfooter").innerHTML=cad;
+
+
+
+var contenido = document.querySelector('#contenido')
+function traer() {
+    fetch('https://api.bluelytics.com.ar/v2/latest')
+    .then(res => res.json())
+    .then(data => {
+        console.log(data.blue)
+        contenido.innerHTML=`
+        <p id="blue">Dolar: ${data.blue.value_avg} Euro: ${data.blue_euro.value_avg}</p>
+        `
+    })
+}
